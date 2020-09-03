@@ -1,0 +1,38 @@
+@import '../../utils/styles/colors_and_variables.scss';
+@import '../../utils/styles/helper_mixins.scss';
+
+.Intro{
+    font-size:2rem;
+    color:whitesmoke;
+    min-height:100vh;
+    background:linear-gradient(10deg,$background-color-secondary 55%,$background-color-primary 0);
+    font-family: 'Montserrat', sans-serif;;
+
+    .profile_header{
+
+        @include flex-row-sa-center;
+        padding-top: calc(50vh - 230px);
+
+        .profile_photo_container{
+            
+            height: $profile-picture-container-height;
+            width : $profile-picture-container-width;
+            overflow: hidden;
+            background-position: center;
+            border-radius: 50%;
+    
+            .profile_photo{
+                width: 140%;
+                height: 100%;
+            }
+        }
+
+
+        .headers{
+            @include flex-coloumn-se-center;
+            padding-right: 30px;
+            
+        }
+    }
+    
+}
