@@ -2,9 +2,11 @@
 @import '../../utils/styles/helper_mixins.scss';
 
 .Intro{
-    font-size:2rem;
-    color:whitesmoke;
+    font-size : 2rem;
+    color : $font-color-primary;
     min-height:100vh;
+    max-width: $maximum-width-of-pages;
+    width:80%;
     background:linear-gradient(10deg,$background-color-secondary 55%,$background-color-primary 0);
     font-family: 'Montserrat', sans-serif;;
 
