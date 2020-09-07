@@ -6,8 +6,13 @@ $font-color-primary:rgb(202, 202, 202);
 $font-color-secondry:whitesmoke;
 
 //constants
-$profile-picture-container-height:420px;
-$profile-picture-container-width:420px;
+$profile-picture-container-height-bigger-screen:420px;
+$profile-picture-container-width-bigger-screen:420px;
+$profile-picture-container-height-smaller-screen:320px;
+$profile-picture-container-width-smaller-screen:320px;
+
+$profile-picture-width:140%;
+$profile-picture-height:100%;
 
 //for responsiveness
 $maximum-width-of-pages : 1440px;

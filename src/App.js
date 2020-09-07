@@ -4,7 +4,7 @@ import Intro from './pages/intro/Intro';
 import Projects from './pages/projects/Projects';
 import * as utility from './data/config_functions';
 
-import './App.css';
+import './App.scss';
 
 const introData = utility.intro_data();
 

@@ -2,39 +2,84 @@
 @import '../../utils/styles/helper_mixins.scss';
 
 .Intro{
+
+    @include align-component-to-center($maximum-width-of-pages);
     font-size : 2rem;
+    padding-bottom: 20vh;
+    padding-top: 10vh;
     color : $font-color-primary;
     min-height:100vh;
-    max-width: $maximum-width-of-pages;
-    width:80%;
-    background:linear-gradient(10deg,$background-color-secondary 55%,$background-color-primary 0);
-    font-family: 'Montserrat', sans-serif;;
-
-    .profile_header{
-
-        @include flex-row-sa-center;
-        padding-top: calc(50vh - 230px);
+    font-family: 'Montserrat', sans-serif;
+    @include flex-coloumn-sa-center;
+        
+        // padding-top: calc(50vh - 230px);
 
         .profile_photo_container{
             
-            height: $profile-picture-container-height;
-            width : $profile-picture-container-width;
+            height: $profile-picture-container-height-smaller-screen;
+            width : $profile-picture-container-width-smaller-screen;
+
             overflow: hidden;
-            background-position: center;
             border-radius: 50%;
     
             .profile_photo{
-                width: 140%;
-                height: 100%;
+                width: $profile-picture-width;
+                height: $profile-picture-height;
             }
         }
 
 
         .headers{
-            @include flex-coloumn-se-center;
-            padding-right: 30px;
-            
+            @include flex-coloumn-ce-center;
+            padding-top:20px;
+            text-align: center;
+
+            .main_heading{
+                font-size : 2.2rem;
+                font-weight: bold;
+                padding-bottom:25px;
+            }
+
+            .sub_heading{
+                font-size : 1.2rem;
+                font-weight: 100;
+                padding-bottom: 20px;
+            }
+
+            .textCorousal{
+                font-size : 1.5rem;
+                font-weight: normal;
+            }
+
+        }
+    
+    
+}
+
+
+@media only screen and (min-width: 800px) {
+    .Intro{
+        @include flex-row-sa-center;
+        padding-top: 0px;
+        padding-bottom: 0px;
+
+        .profile_photo_container{
+            height: $profile-picture-container-height-bigger-screen;
+            width : $profile-picture-container-width-bigger-screen;
+        }
+
+        .headers{
+            .main_heading{
+                font-size : 2.5rem;
+            }
+
+            .sub_heading{
+                font-size : 1.5rem;
+            }
+
+            .textCorousal{
+                font-size : 1.8rem;
+            }
         }
     }
-    
 }
