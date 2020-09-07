@@ -33,6 +33,7 @@
             @include flex-coloumn-ce-center;
             padding-top:20px;
             text-align: center;
+            width:360px;
 
             .main_heading{
                 font-size : 2.2rem;
@@ -49,6 +50,8 @@
             .textCorousal{
                 font-size : 1.5rem;
                 font-weight: normal;
+                width: 360px;
+                height:25px;
             }
 
         }
@@ -69,6 +72,7 @@
         }
 
         .headers{
+            width:450px;
             .main_heading{
                 font-size : 2.5rem;
             }
@@ -79,6 +83,7 @@
 
             .textCorousal{
                 font-size : 1.8rem;
+                width: 450px;
             }
         }
     }

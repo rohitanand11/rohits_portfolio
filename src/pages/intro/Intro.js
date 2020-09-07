@@ -1,4 +1,5 @@
 import React from "react";
+import Typical from 'react-typical';
 
 //import from other components
 import BackgroundWrapper from "../../hoc/background_wrapper/BackgroundWrapper";
@@ -28,7 +29,12 @@ const Intro = ({ introData }) => {
               {introData.name_heading}
             </div>
             <div className={Classes.textCorousal}>
-              I am a software developer
+              I am{" "} 
+              <Typical
+                loop = {Infinity}
+                wrapper = "b"
+                steps = {introData.text_corousal}
+              />
             </div>
           </div>
         
