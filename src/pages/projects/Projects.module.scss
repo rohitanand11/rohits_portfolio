@@ -1,5 +1,7 @@
 @import '../../utils/styles/colors_and_variables.scss';
+@import '../../utils/styles/helper_mixins.scss';
 
 .Projects{
+    @include align-component-to-center($maximum-width-of-pages);
     min-height:100vh;
 }
