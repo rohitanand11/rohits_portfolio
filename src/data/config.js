@@ -2,6 +2,20 @@
 import profile_picture from "../assets/images/profile_picture.JPG";
 import avengers from "../assets/images/projects_image/avengers.PNG";
 
+//skills images
+import html from "../assets/images/skills_images/html5.png";
+import css from "../assets/images/skills_images/css.png";
+import c from "../assets/images/skills_images/c.png";
+import github from "../assets/images/skills_images/github.png";
+import js from "../assets/images/skills_images/js.png";
+import node from "../assets/images/skills_images/nodejs.png";
+import photoshop from "../assets/images/skills_images/photoshop.png";
+import python from "../assets/images/skills_images/python.png";
+import react from "../assets/images/skills_images/react.png";
+import redux from "../assets/images/skills_images/redux.png";
+import sass from "../assets/images/skills_images/sass.png";
+
+
 const data = {
   intro: {
     profile_picture_url: profile_picture,
@@ -82,8 +96,61 @@ const data = {
 
 
     ]
-    
+  },
+  skills : {
+    skillsArray:[
+      {
+        id:1,
+        skill:"html5",
+        logo : html,
+      },
+      {
+        id:2,
+        skill:"css",
+        logo : css,
+      },
+      {
+        id:1,
+        skill:"JavaScript",
+        logo : js,
+      },
+      {
+        id:1,
+        skill:"react",
+        logo : react,
+      },
+      {
+        id:1,
+        skill:"redux",
+        logo : redux,
+      },
+      {
+        id:1,
+        skill:"python",
+        logo : python,
+      },
+      {
+        id:1,
+        skill:"sass",
+        logo : sass,
+      },
+      {
+        id:1,
+        skill:"github",
+        logo : github,
+      },
+      {
+        id:1,
+        skill:"node-js",
+        logo : node,
+      },
+      {
+        id:1,
+        skill:"photoshop",
+        logo : photoshop,
+      }
 
+    ]
   }
 };
 
