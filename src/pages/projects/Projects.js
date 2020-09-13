@@ -8,14 +8,27 @@ import PageHeader from "../../components/page_header/PageHeader";
 //style components goes here
 import classes from "./Projects.module.scss";
 
-const Projects = () => {
+const Projects = ({projectData}) => {
+
+    const renderProjectCards = () => {
+        if(projectData) {
+            return projectData.map((project,index)=>{
+                return <Card project = {project}/>
+            })
+        } else {
+            return null;
+        }
+    }
+
   return (
     <BackgroundWrapper
       background_style={{ backgroundColor: "rgb(150,150,150)" }}
     >
       <div className={classes.Projects}>
         <PageHeader pageTitle="Projects" />
-        <Card />
+        <div className={classes.ProjectCards}>
+          {renderProjectCards()}
+        </div>
       </div>
     </BackgroundWrapper>
   );

@@ -1,35 +1,39 @@
 import React from "react";
 import Classes from "./Card.module.scss";
-import laptop from "../../assets/images/projects_image/laptop.png";
 
-const Card = (props) => {
-  const link = "www.google.com";
-  const header = "heading";
-  const description =
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem";
-  const tech = "😃😃😃😃😃";
+const Card = ({ project }) => {
+  const renderProjectDeatils = () => {
+    if (project) {
+      return (
+        <React.Fragment>
+          <div className={Classes.Card}>
+            <a href={project.project_url}>
+              <div className={Classes.imageContainer}>
+                <img src={project.image_path} alt="current project" />
+              </div>
+            </a>
 
-  return (
-    <div className={Classes.Card}>
-      <a href={link}>
-        <div className={Classes.imageContainer}>
-          <img src={laptop} alt="current project" />
-        </div>
-      </a>
+            <div className={Classes.Content}>
+              <div className={Classes.ContentHeader}>
+                {project.project_name}
+              </div>
+              <div className={Classes.Description}>{project.project_description}</div>
+              <div className={Classes.ContentFooter}>
+                <a href="www.google.com"><div>visit code</div></a>
+                <a href="www.google.com"><div>visit webpage</div></a>
+              </div>
+            </div>
 
-      <div className={Classes.Content}>
-        <div className={Classes.ContentHeader}>
-          <strong>{header}</strong>
-        </div>
-        <div className={Classes.Description}>{description}</div>
-        <div className={Classes.ContentFooter}>
-          <strong>{header}</strong>
-        </div>
-      </div>
+            <div className={Classes.Footer}></div>
+          </div>
+        </React.Fragment>
+      );
+    } else {
+      return null;
+    }
+  };
 
-      <div className={Classes.Footer}>{tech}</div>
-    </div>
-  );
+  return renderProjectDeatils();
 };
 
 export default Card;
